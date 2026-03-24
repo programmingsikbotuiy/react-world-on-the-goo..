@@ -1,10 +1,12 @@
 
 
+import { Suspense } from 'react';
 import './App.css'
 import Countrys from './Components/Countrys/Countrys';
 
 
-
+const fetchMessage = fetch("https://openapi.programming-hero.com/api/all")
+.then(res =>res.json())
 
 function App() {
   
@@ -12,7 +14,9 @@ function App() {
   return (
     <>
 
-    <Countrys></Countrys>
+    <Suspense fallback={<p>loading...</p>}>
+      <Countrys fetchMessage={fetchMessage}></Countrys>
+    </Suspense>
     </>
   
   )
