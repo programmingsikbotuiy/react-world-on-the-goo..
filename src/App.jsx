@@ -1,15 +1,21 @@
 
+
 import './App.css'
-import Countries from './components/Countries/Countries'
+import Countrys from './Components/Countrys/Countrys';
+
+
+
 
 function App() {
   
 
   return (
     <>
-    <Countries></Countries>
+
+    <Countrys></Countrys>
     </>
+  
   )
 }
 
-export default App
+export default App;
